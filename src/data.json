@@ -1,0 +1,22 @@
+{
+    "steps": [
+      {
+        "key": "first",
+        "value": "purple"
+      },
+      {
+        "key": "second",
+        "value": "pink"
+      },
+      {
+        "key": "third",
+        "value": "green"
+      }
+    ],
+    "durations": {
+      "first": 2000,
+      "second": 2500,
+      "third": 1500
+    }
+  }
+  
