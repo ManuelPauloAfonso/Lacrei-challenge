@@ -1,25 +1,23 @@
+import Card from "../../components/Card";
+import * as data from "../../data.json";
 
-import Cards from '../../components/Card'
-import * as data from '../../data.json'
-import { Container} from './style'
-
-
-console.log(data.steps)
+const dados = data.steps;
 
 export default function Home() {
+    const { durations } = data;
+
     return (
-        <Container>
-            <header>
-                    Cards and timer
-            </header>
-            {
-                data.steps.map((item, index, durations) => {
-                    <Cards key={index}>
-                       <p>{item.key}: {item.value}, duration: {durations[item.key]} </p>
-                    </Cards>
-                })
-            }
-           
-       </Container>
-    )
+        <div>
+            <header>Cards and timer</header>
+
+            {dados.map((itemcolor, index) => (
+                <div key={index}>
+                    <Card
+                        color={Object.entries(itemcolor)[1][1]}
+                        duration={Object.entries(durations)[index][1]}
+                    />
+                </div>
+            ))}
+        </div>
+    );
 }
